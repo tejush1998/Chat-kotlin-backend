@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  build:
+    commands:
+      - npm cache clean --force
+      - npm i eslint eslint-config-airbnb-base
+      - npx eslint --ext .js src --fix
+      - zip -r function.zip ./ -x '*node_modules*' -x '*installation*' -x '*env.json*' -x '*.git*'
+  post_build:
+    commands:
+      - aws lambda update-function-code --function-name aegis-users --zip-file fileb://function.zip
+      

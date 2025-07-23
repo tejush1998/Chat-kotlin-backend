@@ -1,5 +1,9 @@
 {
   "type": "module",
   "name": "",
-  "version": ""
+  "version": "",
+   "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0"
+  },
 }
