@@ -2,8 +2,13 @@
   "type": "module",
   "name": "",
   "version": "",
-   "devDependencies": {
+  "devDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.848.0",
+    "@aws-sdk/lib-dynamodb": "^3.850.0",
+    "uuid": "^11.1.0"
   }
 }
